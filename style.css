@@ -1,0 +1,105 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fb;
+}
+header {
+    background-color: rgb(216, 60, 86);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+nav {
+    background-color:  rgb(230, 159, 171);
+    text-align: center;
+    padding: 12px;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 15px;
+    font-weight: bold;
+}
+nav a:hover {
+    color: #ffeb3b;
+}
+nav a.active {
+    text-decoration: underline;
+    text-decoration-color:  rgb(168, 58, 76);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 5px;
+}
+.container {
+    width: 80%;
+    margin: 30px auto;
+}
+h1 {
+    text-align: center;
+    color: pink;
+}
+h2 {
+    text-align: center;
+    color: rgb(168, 58, 76);
+}
+p {
+    line-height: 1.6;
+    text-align: center;
+}
+form {
+    width: 400px;
+    margin: auto;
+    background: peachpuff;
+    padding: 25px;
+    border-radius: 6px;
+}
+label {
+    display: block;
+    margin-top: 15px;
+}
+input,
+select {
+    width: 100%;
+    padding: 3px;
+    margin-top: 5px;
+}
+button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    background-color: #df6aaa;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #aa0b82;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+table,
+th,
+td {
+    border: 1px solid #999;
+}
+th {
+    background-color: #1976d2;
+    color: white;
+}
+th,
+td {
+    padding: 12px;
+    text-align: center;
+}
+footer {
+    text-align: left;
+    padding: 15px;
+    background-color: rgb(216, 60, 86);
+    color: white;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
