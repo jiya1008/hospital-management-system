@@ -1,105 +1,176 @@
+/* TASK 1: Basic Page Styling & Global Setup */
+* {
+    box-sizing: border-box; /* Helps with precise width/padding calculations */
+}
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f7fb;
+    padding: 0 0 80px 0; /* Padding at bottom prevents content from hiding behind fixed footer */
+    font-family: 'Segoe UI', Arial, sans-serif; /* Clean, modern font family */
+    background-color: #f4f7fb; /* Light clean background */
+    color: #333333;
 }
+/* TASK 2: Header and Footer Styling */
 header {
-    background-color: rgb(216, 60, 86);
-    color: white;
+    background-color: #d83c56;
+    color: #ffffff;
     text-align: center;
-    padding: 20px;
+    padding: 25px 15px;
 }
-nav {
-    background-color:  rgb(230, 159, 171);
+header h1 {
+    margin: 0;
+    font-size: 2.2rem;
+    color: #ffffff;
+}
+footer {
+    background-color: #d83c56;
+    color: #ffffff;
     text-align: center;
-    padding: 12px;
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+/* TASK 3: Horizontal Navigation Bar Design */
+nav {
+    background-color: #e69fab;
+    text-align: center;
+    padding: 12px 0;
 }
 nav a {
-    color: white;
-    text-decoration: none;
-    margin: 15px;
+    color: #ffffff;
+    text-decoration: none; /* Removes underline */
+    margin: 0 15px;
     font-weight: bold;
+    display: inline-block; /* Displays links horizontally */
+    transition: color 0.2s ease;
 }
+/* Change link color on hover */
 nav a:hover {
     color: #ffeb3b;
 }
+/* Active page link styling */
 nav a.active {
     text-decoration: underline;
-    text-decoration-color:  rgb(168, 58, 76);
-    text-decoration-thickness: 2px;
-    text-underline-offset: 5px;
+    text-decoration-color: #a83a4c;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 6px;
 }
-.container {
+/* TASK 4: Card Styling (Box Model & Shadow) */
+.card {
+    background-color: #ffffff;
     width: 80%;
+    max-width: 600px;
+    margin: 30px auto; /* Centers card on page */
+    padding: 25px;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle dropdown shadow */
+}
+/* Main page container reusing consistent spacing */
+.container {
+    width: 85%;
+    max-width: 1000px;
     margin: 30px auto;
 }
-h1 {
-    text-align: center;
-    color: pink;
-}
-h2 {
-    text-align: center;
-    color: rgb(168, 58, 76);
-}
-p {
-    line-height: 1.6;
-    text-align: center;
-}
+/* Form Container styled like a Card */
 form {
-    width: 400px;
-    margin: auto;
-    background: peachpuff;
+    max-width: 450px;
+    margin: 20px auto;
+    background-color: #ffffff;
     padding: 25px;
-    border-radius: 6px;
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 label {
     display: block;
     margin-top: 15px;
+    font-weight: bold;
+    color: #444;
 }
 input,
 select {
     width: 100%;
-    padding: 3px;
+    padding: 10px;
     margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 button {
     margin-top: 20px;
     width: 100%;
     padding: 12px;
-    background-color: #df6aaa;
+    background-color: #d83c56;
     color: white;
     border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
     cursor: pointer;
 }
 button:hover {
-    background-color: #aa0b82;
+    background-color: #a83a4c;
+}
+/* TASK 5: List Styling */
+/* Ordered and Unordered List Styling */
+ol, ul {
+    background-color: #ffffff;
+    padding: 20px 35px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+}
+ol li, ul li {
+    margin-bottom: 12px; /* Spacing between list items */
+    color: #d83c56; /* Item name color */
+    font-weight: 600;
+}
+/* Description List Styling */
+dl {
+    background-color: #fff3f5; /* Distinct background */
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #d83c56;
+}
+dt {
+    font-weight: bold;
+    color: #a83a4c;
+    margin-top: 10px;
+}
+dd {
+    margin-left: 20px;
+    margin-bottom: 10px;
+    color: #555555;
+}
+/* TASK 6: Consistent Page Elements & Tables */
+h2 {
+    text-align: center;
+    color: #a83a4c;
+}
+p {
+    line-height: 1.6;
+    text-align: center;
 }
 table {
     width: 100%;
     border-collapse: collapse;
     background: white;
+    margin-top: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
-table,
-th,
-td {
-    border: 1px solid #999;
+table, th, td {
+    border: 1px solid #dddddd;
 }
 th {
-    background-color: #1976d2;
+    background-color: #d83c56;
     color: white;
 }
-th,
-td {
+th, td {
     padding: 12px;
     text-align: center;
 }
-footer {
-    text-align: left;
-    padding: 15px;
-    background-color: rgb(216, 60, 86);
-    color: white;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
+img {
+    border-radius: 8px;
+    object-fit: cover;
+    margin-top: 15px;
 }
